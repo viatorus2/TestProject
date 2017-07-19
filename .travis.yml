@@ -9,10 +9,13 @@ branches:
  # Run npm test always
 script:
     - "npm test"
+    - ./changefile.sh
+before_deploy:
+    - ./deploy.sh
 deploy:
     provider: npm
     email: $NPM_EMAIL
     api_key: $NPM_KEY
     on:
         tags: true
-        branch: master
+        all_branches: true
