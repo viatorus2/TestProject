@@ -4,7 +4,7 @@
   "description": "Test project travis and npm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Test\""
+    "test": "echo \"Test\" && git tag -l --points-at HEAD"
   },
   "repository": {
     "type": "git",
