@@ -16,6 +16,8 @@ branches:
  # Run npm test always
 script:
     - "npm test"
+    - git config credential.helper "store --file=.git/credentials"
+    - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
     - ./changefile.sh
     - ./deploy.sh
 deploy:
