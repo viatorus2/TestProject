@@ -1,0 +1,25 @@
+{
+  "name": "@sample_test/testproject",
+  "version": "1.0.0",
+  "description": "Test project travis and npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viatorus/TestProject.git"
+  },
+  "keywords": [
+    "test",
+    "npm",
+    "travis",
+    "publish"
+  ],
+  "author": "Viatorus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Viatorus/TestProject/issues"
+  },
+  "homepage": "https://github.com/Viatorus/TestProject#readme"
+}
