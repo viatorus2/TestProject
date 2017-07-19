@@ -4,7 +4,10 @@
   "description": "Test project travis and npm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Test\""
+    "test": "echo \"Test\"",
+    "prepublish": "./offline/offline-npm --prepublish ; ",
+    "preinstall": "./offline/offline-npm --preinstall & sleep 2 ; ",
+    "postinstall": "./offline/offline-npm --postinstall ; "
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/Viatorus/TestProject/issues"
   },
-  "homepage": "https://github.com/Viatorus/TestProject#readme"
+  "homepage": "https://github.com/Viatorus/TestProject#readme",
+  "dependencies": {
+    "node-gyp": "^3.5.0",
+    "travis-encrypt": "^2.1.1"
+  }
 }
