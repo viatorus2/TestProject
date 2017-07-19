@@ -17,7 +17,6 @@ branches:
 script:
     - "npm test"
     - ./changefile.sh
-before_deploy:
     - ./deploy.sh
 deploy:
     provider: npm
