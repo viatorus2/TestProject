@@ -1,6 +1,13 @@
 language: node_js
 node_js:
     - "8"
+
+env:
+    global:
+        - GIT_NAME: Travis CI
+        - GIT_EMAIL: builds@travis-ci.org
+        - TRAVIS_REPO_SLUG: mygitusername/myreposlug
+        - GIT_BRANCH: master
 sudo: false
 branches:
     only:
