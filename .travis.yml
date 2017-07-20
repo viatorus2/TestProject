@@ -12,6 +12,10 @@ sudo: false
  # Run npm test always
 script:
     - "npm test"
+    - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; echo "direct push to master"; fi
+    - if [ "$TRAVIS_PULL_REQUEST" = "true" ]; echo "it is a pull request"; fi
+    - echo $TRAVIS_PULL_REQUEST
+    - if [ -n "TRAVIS_TAG" ]; echo "With a tag"; fi
     - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
     - echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH=$BRANCH"
     - echo "Tag=$TRAVIS_TAG"
