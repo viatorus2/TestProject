@@ -20,8 +20,12 @@ const ROOT_DIR = process.cwd();
 
 // Check git status.
 const IS_PULL_REQUEST = process.env.TRAVIS_PULL_REQUEST !== "false";
-print("PullRequest: " + IS_PULL_REQUEST);
-print("PR?: " + process.env.TRAVIS_PULL_REQUEST);
+const IS_MASTER_TARGET = process.env.TRAVIS_BRANCH === process.env.GIT_BRANCH;
+const COMMIT_TAG = process.env.TRAVIS_TAG;
+
+print("PR: ", IS_PULL_REQUEST);
+print("PUSH: ", IS_MASTER_TARGET);
+print("Tag: ", COMMIT_TAG);
 
 // Check if master.
 
