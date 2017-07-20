@@ -21,6 +21,8 @@ const ROOT_DIR = process.cwd();
 // Check git status.
 const IS_PULL_REQUEST = process.env.TRAVIS_PULL_REQUEST === "false";
 
+print(process.env.TRAVIS_PULL_REQUES);
+
 // Check if master.
 //run("git", [""])
 
