@@ -24,7 +24,6 @@ print("PullRequest: " + IS_PULL_REQUEST);
 print("PR?: " + process.env.TRAVIS_PULL_REQUEST);
 
 // Check if master.
-//run("git", [""])
 
 let promise = Promise.resolve();
 
