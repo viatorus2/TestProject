@@ -40,6 +40,7 @@ if (!IS_PULL_REQUEST) {
 
 promise.catch((e) => {
   print_error(e.message);
+  process.exit(1);
 });
 
 function build() {
@@ -58,7 +59,7 @@ function build() {
     print(`======      [${PACKAGE}]: PACKING    =====`);
     remove_dir(OUT_DIR);
 
-    run("webpack", ["--config=config/webp2ack.config.js", `--entry=${SRC_DIR}/src/index.js`, `--output-library=${PACKAGE}`, `--output-path=${OUT_DIR}`, `--output-filename=${FILENAME}`]);
+    run("webpack", ["--config=config/webpack.config.js", `--entry=${SRC_DIR}/src/index.js`, `--output-library=${PACKAGE}`, `--output-path=${OUT_DIR}`, `--output-filename=${FILENAME}`]);
 
     print(`======      [${PACKAGE}]: BUNDLING   =====`);
     remove_dir(NPM_DIR);
