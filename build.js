@@ -22,6 +22,11 @@ const ROOT_DIR = process.cwd();
 const IS_PULL_REQUEST = process.env.TRAVIS_PULL_REQUEST === "false";
 
 print(process.env.TRAVIS_PULL_REQUEST);
+print(IS_PULL_REQUEST);
+print(process.env.TRAVIS_PULL_REQUEST === "false");
+print(process.env.TRAVIS_PULL_REQUEST == "false");
+print(process.env.TRAVIS_PULL_REQUEST === false);
+print(process.env.TRAVIS_PULL_REQUEST == false);
 
 // Check if master.
 //run("git", [""])
