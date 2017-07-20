@@ -1,0 +1,31 @@
+{
+  "name": "@sample_test/testproject",
+  "version": "1.0.15",
+  "description": "Test project travis and npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Test\" && git tag -l --points-at HEAD"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viatorus/TestProject.git"
+  },
+  "keywords": [
+    "test",
+    "npm",
+    "travis",
+    "publish"
+  ],
+  "author": "Viatorus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Viatorus/TestProject/issues"
+  },
+  "homepage": "https://github.com/Viatorus/TestProject#readme",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-loader": "^1.9.0",
+    "uglify-es": "^3.0.25",
+    "webpack": "^3.3.0"
+  }
+}
