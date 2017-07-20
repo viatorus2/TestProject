@@ -19,7 +19,7 @@ const PACKAGES = [
 const ROOT_DIR = process.cwd();
 
 // Check git status.
-const IS_PULL_REQUEST = process.env.TRAVIS_PULL_REQUEST === "true";
+const IS_PULL_REQUEST = process.env.TRAVIS_PULL_REQUEST !== "false";
 print("PullRequest: " + IS_PULL_REQUEST);
 
 // Check if master.
@@ -83,9 +83,12 @@ function build() {
 }
 
 function merge() {
+  const RELEASE = "RELEASE";
+  run("git", ["checkout", "-b", RELEASE, "origin/master"]);
 
-//  execSync(`git checkout master && `)
-
+  run("git", ["checkout", "master"]);
+  run("git", ["merge", RELEASE]);
+  run("git", ["branch", "-d", RELEASE]);
 }
 
 function npm_login() {
