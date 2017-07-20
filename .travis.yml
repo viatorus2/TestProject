@@ -6,7 +6,6 @@ env:
     global:
         - GIT_NAME: Travis CI
         - GIT_EMAIL: builds@travis-ci.org
-        - TRAVIS_REPO_SLUG: viatorus/TestProject
         - GIT_BRANCH: master
 sudo: false
 
