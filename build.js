@@ -19,14 +19,8 @@ const PACKAGES = [
 const ROOT_DIR = process.cwd();
 
 // Check git status.
-const IS_PULL_REQUEST = process.env.TRAVIS_PULL_REQUEST === "false";
-
-print(process.env.TRAVIS_PULL_REQUEST);
-print(IS_PULL_REQUEST);
-print(process.env.TRAVIS_PULL_REQUEST === "false");
-print(process.env.TRAVIS_PULL_REQUEST == "false");
-print(process.env.TRAVIS_PULL_REQUEST === false);
-print(process.env.TRAVIS_PULL_REQUEST == false);
+const IS_PULL_REQUEST = process.env.TRAVIS_PULL_REQUEST === "true";
+print("PullRequest: " + IS_PULL_REQUEST);
 
 // Check if master.
 //run("git", [""])
@@ -41,7 +35,7 @@ if (!IS_PULL_REQUEST) {
   promise = promise
     .then(() => npm_login())
     .then(() => {
-      npm_publish();
+      //npm_publish();
     });
 }
 
